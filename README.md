@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytical Chemistry — Complete Exam Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Code+Pro:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2330;
+    --border: #30363d;
+    --accent: #58a6ff;
+    --accent2: #f0883e;
+    --accent3: #3fb950;
+    --accent4: #ff7b72;
+    --accent5: #d2a8ff;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --gold: #e3b341;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #0d1117 0%, #1a1f2e 40%, #0d1117 100%);
+    border-bottom: 2px solid var(--accent);
+    padding: 60px 40px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(88,166,255,0.07) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent);
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 20px 40px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition: all 0.2s;
+  }
+
+  .nav a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(88,166,255,0.08);
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 40px 30px; }
+
+  .section {
+    margin-bottom: 70px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .section-header {
+    padding: 25px 35px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+    opacity: 0.25;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+
+  .section-body { padding: 35px; }
+
+  .s1 .section-header { background: linear-gradient(90deg, rgba(88,166,255,0.12), transparent); }
+  .s1 .section-title { color: var(--accent); }
+  .s2 .section-header { background: linear-gradient(90deg, rgba(63,185,80,0.12), transparent); }
+  .s2 .section-title { color: var(--accent3); }
+  .s3 .section-header { background: linear-gradient(90deg, rgba(240,136,62,0.12), transparent); }
+  .s3 .section-title { color: var(--accent2); }
+  .s4 .section-header { background: linear-gradient(90deg, rgba(210,168,255,0.12), transparent); }
+  .s4 .section-title { color: var(--accent5); }
+  .s5 .section-header { background: linear-gradient(90deg, rgba(227,179,65,0.12), transparent); }
+  .s5 .section-title { color: var(--gold); }
+  .s6 .section-header { background: linear-gradient(90deg, rgba(255,123,114,0.12), transparent); }
+  .s6 .section-title { color: var(--accent4); }
+  .s7 .section-header { background: linear-gradient(90deg, rgba(63,185,80,0.12), transparent); }
+  .s7 .section-title { color: var(--accent3); }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 28px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    color: var(--gold);
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin: 18px 0 8px;
+  }
+
+  p { margin-bottom: 12px; color: var(--text); }
+
+  /* FORMULA BOXES */
+  .formula-box {
+    background: #0d1117;
+    border: 1px solid var(--accent);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin: 18px 0;
+    font-family: 'Source Code Pro', monospace;
+  }
+
+  .formula-box.green { border-color: var(--accent3); }
+  .formula-box.orange { border-color: var(--accent2); }
+  .formula-box.purple { border-color: var(--accent5); }
+  .formula-box.gold { border-color: var(--gold); }
+  .formula-box.red { border-color: var(--accent4); }
+
+  .formula-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .formula {
+    font-size: 1.2rem;
+    color: var(--accent);
+    font-weight: 600;
+    display: block;
+    margin: 6px 0;
+  }
+
+  .formula.green { color: var(--accent3); }
+  .formula.orange { color: var(--accent2); }
+  .formula.purple { color: var(--accent5); }
+  .formula.gold { color: var(--gold); }
+  .formula.red { color: var(--accent4); }
+
+  /* DIAGRAM AREA */
+  .diagram-wrap {
+    background: #0d1117;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .diagram-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+  }
+
+  svg { max-width: 100%; overflow: visible; }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 14px;
+  }
+
+  th {
+    background: var(--surface2);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+  }
+
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* CALLOUT */
+  .callout {
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .callout.info { background: rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.3); }
+  .callout.warn { background: rgba(240,136,62,0.1); border: 1px solid rgba(240,136,62,0.3); }
+  .callout.success { background: rgba(63,185,80,0.1); border: 1px solid rgba(63,185,80,0.3); }
+  .callout.danger { background: rgba(255,123,114,0.1); border: 1px solid rgba(255,123,114,0.3); }
+
+  .callout-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+  .callout-body { font-size: 14px; }
+
+  /* WORKED EXAMPLE */
+  .worked-example {
+    background: var(--surface2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+
+  .we-header {
+    background: var(--surface);
+    padding: 12px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .we-body { padding: 20px; }
+
+  .we-step {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+
+  .we-num {
+    background: var(--accent);
+    color: #000;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .we-num.green { background: var(--accent3); }
+  .we-num.orange { background: var(--accent2); }
+  .we-num.purple { background: var(--accent5); }
+  .we-num.gold { background: var(--gold); }
+
+  .we-text { font-size: 14px; }
+  .we-text code {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--accent);
+    font-size: 14px;
+  }
+
+  code.g { color: var(--accent3); }
+  code.o { color: var(--accent2); }
+  code.p { color: var(--accent5); }
+  code.gd { color: var(--gold); }
+
+  /* STEP CHAIN */
+  .step-chain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 16px 0;
+    align-items: center;
+  }
+
+  .step-item {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+    min-width: 100px;
+  }
+
+  .step-arrow {
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    padding: 0 5px;
+  }
+
+  /* GRID */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 15px 0;
+  }
+
+  @media(max-width: 700px) {
+    .two-col { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2rem; }
+    .nav { padding: 12px 16px; }
+    .section-body { padding: 20px; }
+    .container { padding: 20px 15px; }
+    .step-chain { flex-direction: column; align-items: flex-start; }
+    .step-arrow { transform: rotate(90deg); }
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 2px;
+  }
+  .tag-blue { background: rgba(88,166,255,0.15); color: var(--accent); border: 1px solid rgba(88,166,255,0.3); }
+  .tag-green { background: rgba(63,185,80,0.15); color: var(--accent3); border: 1px solid rgba(63,185,80,0.3); }
+  .tag-orange { background: rgba(240,136,62,0.15); color: var(--accent2); border: 1px solid rgba(240,136,62,0.3); }
+  .tag-red { background: rgba(255,123,114,0.15); color: var(--accent4); border: 1px solid rgba(255,123,114,0.3); }
+  .tag-purple { background: rgba(210,168,255,0.15); color: var(--accent5); border: 1px solid rgba(210,168,255,0.3); }
+
+  ul, ol { padding-left: 20px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; font-size: 14px; }
+
+  .highlight { color: var(--gold); font-weight: 700; }
+  .mono { font-family: 'Source Code Pro', monospace; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Analytical Chemistry</h1>
+  <p>Complete Exam Study Guide — Calculations · Structures · Diagrams</p>
+</div>
+
+<nav class="nav">
+  <a href="#titration">1. Titration</a>
+  <a href="#gravimetric">2. Gravimetric</a>
+  <a href="#combustion">3. Combustion</a>
+  <a href="#electrogravimetry">4. Electrogravimetry</a>
+  <a href="#tga">5. TGA</a>
+  <a href="#dta">6. DTA</a>
+  <a href="#sampling">7. Sampling</a>
+</nav>
+
+<div class="container">
+
+<!-- ===== SECTION 1: TITRATION ===== -->
+<section class="section s1" id="titration">
+  <div class="section-header">
+    <span class="section-number">01</span>
+    <div>
+      <div class="section-title">Titration / Volumetric Analysis</div>
+      <div style="color:var(--text-muted);font-size:13px;">Definitions · Types · Setup · Calculations · Indicators</div>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <h3>Definition & Principle</h3>
+    <p>Volumetric analysis determines the <strong>concentration of an unknown solution (analyte)</strong> by reacting it with a <strong>standard solution (titrant)</strong> of known concentration. The reaction is carried out until the <strong>equivalence point</strong> is reached — the stoichiometric point where moles of titrant exactly equal moles of analyte.</p>
+
+    <h3>Apparatus Diagram</h3>
+    <div class="diagram-wrap">
+      <div class="diagram-title">Titration Setup</div>
+      <svg width="340" height="400" viewBox="0 0 340 400" font-family="Lato, sans-serif">
+        <!-- Stand -->
+        <rect x="20" y="360" width="300" height="12" rx="4" fill="#30363d"/>
+        <rect x="155" y="100" width="10" height="265" fill="#30363d"/>
+        <rect x="20" y="100" width="290" height="10" rx="4" fill="#30363d"/>
+        <!-- Clamp -->
+        <rect x="100" y="100" width="60" height="14" rx="4" fill="#58a6ff" opacity="0.7"/>
+        <!-- Burette -->
+        <rect x="122" y="114" width="16" height="180" rx="3" fill="none" stroke="#58a6ff" stroke-width="2"/>
+        <!-- Liquid in burette -->
+        <rect x="124" y="116" width="12" height="100" rx="2" fill="rgba(88,166,255,0.3)"/>
+        <!-- Graduation marks on burette -->
+        <line x1="122" y1="145" x2="132" y2="145" stroke="#8b949e" stroke-width="1"/>
+        <line x1="122" y1="165" x2="132" y2="165" stroke="#8b949e" stroke-width="1"/>
+        <line x1="122" y1="185" x2="132" y2="185" stroke="#8b949e" stroke-width="1"/>
+        <line x1="122" y1="205" x2="132" y2="205" stroke="#8b949e" stroke-width="1"/>
+        <line x1="122" y1="225" x2="132" y2="225" stroke="#8b949e" stroke-width="1"/>
+        <text x="140" y="149" fill="#8b949e" font-size="10">10</text>
+        <text x="140" y="169" fill="#8b949e" font-size="10">20</text>
+        <text x="140" y="189" fill="#8b949e" font-size="10">30</text>
+        <text x="140" y="209" fill="#8b949e" font-size="10">40</text>
+        <text x="140" y="229" fill="#8b949e" font-size="10">50</text>
+        <!-- Stopcock -->
+        <rect x="118" y="290" width="24" height="10" rx="3" fill="#8b949e"/>
+        <line x1="130" y1="300" x2="130" y2="315" stroke="#58a6ff" stroke-width="2"/>
+        <!-- Conical flask -->
+        <path d="M100,315 L115,350 L145,370 L195,370 L225,350 L240,315 Z" fill="rgba(63,185,80,0.15)" stroke="#3fb950" stroke-width="2"/>
+        <path d="M113,315 L125,342 L145,358 L195,358 L215,342 L227,315 Z" fill="rgba(63,185,80,0.25)"/>
+        <line x1="100" y1="315" x2="240" y2="315" stroke="#3fb950" stroke-width="2"/>
+        <rect x="121" y="299" width="18" height="17" rx="2" fill="none" stroke="#3fb950" stroke-width="2"/>
+        <!-- Labels -->
+        <text x="80" y="195" fill="#58a6ff" font-size="12" font-weight="700">Burette</text>
+        <text x="55" y="210" fill="#8b949e" font-size="11">(Titrant / Known</text>
+        <text x="65" y="223" fill="#8b949e" font-size="11">concentration)</text>
+        <text x="248" y="345" fill="#3fb950" font-size="12" font-weight="700">Conical</text>
+        <text x="248" y="360" fill="#3fb950" font-size="12" font-weight="700">Flask</text>
+        <text x="248" y="375" fill="#8b949e" font-size="11">(Analyte)</text>
+        <!-- Tip drop -->
+        <ellipse cx="130" cy="320" rx="2.5" ry="3.5" fill="#58a6ff" opacity="0.8"/>
+        <!-- Annotations -->
+        <text x="30" y="275" fill="#e3b341" font-size="11">← Stopcock</text>
+        <text x="30" y="288" fill="#8b949e" font-size="10">(controls flow)</text>
+      </svg>
+    </div>
+
+    <h3>Key Terms</h3>
+    <table>
+      <tr><th>Term</th><th>Definition</th></tr>
+      <tr><td><span class="highlight">Titrant</span></td><td>Standard solution of known concentration — placed in the burette</td></tr>
+      <tr><td><span class="highlight">Analyte</span></td><td>Solution of unknown concentration — placed in the conical flask</td></tr>
+      <tr><td><span class="highlight">Equivalence Point</span></td><td>Point where moles titrant = moles analyte (stoichiometrically)</td></tr>
+      <tr><td><span class="highlight">End Point</span></td><td>Observed color change of indicator (should be close to equivalence point)</td></tr>
+      <tr><td><span class="highlight">Titration Error</span></td><td>Difference between end point and equivalence point</td></tr>
+      <tr><td><span class="highlight">Primary Standard</span></td><td>Highly pure, stable substance used to prepare/standardize solutions</td></tr>
+    </table>
+
+    <h3>Indicators & pH Ranges</h3>
+    <table>
+      <tr><th>Indicator</th><th>pH Range</th><th>Color Change (Acid→Base)</th><th>Use</th></tr>
+      <tr><td>Phenolphthalein</td><td>8.2 – 10.0</td><td>Colorless → Pink</td><td>Weak acid / Strong base</td></tr>
+      <tr><td>Methyl Orange</td><td>3.1 – 4.4</td><td>Red → Yellow</td><td>Strong acid / Weak base</td></tr>
+      <tr><td>Methyl Red</td><td>4.4 – 6.2</td><td>Red → Yellow</td><td>Strong acid / Weak base</td></tr>
+      <tr><td>Bromothymol Blue</td><td>6.0 – 7.6</td><td>Yellow → Blue</td><td>Strong acid / Strong base</td></tr>
+      <tr><td>Litmus</td><td>5.0 – 8.0</td><td>Red → Blue</td><td>General indicator</td></tr>
+    </table>
+
+    <h3>EDTA Structure (Complexometric Titration)</h3>
+    <div class="diagram-wrap">
+      <div class="diagram-title">EDTA — Ethylenediaminetetraacetic Acid (Hexadentate Ligand)</div>
+      <svg width="500" height="220" viewBox="0 0 500 220">
+        <!-- Central ethylene backbone -->
+        <line x1="200" y1="110" x2="300" y2="110" stroke="#e3b341" stroke-width="2.5"/>
+        <!-- N atoms -->
+        <circle cx="195" cy="110" r="14" fill="#0d1117" stroke="#d2a8ff" stroke-width="2"/>
+        <text x="195" y="115" text-anchor="middle" fill="#d2a8ff" font-size="13" font-weight="700">N</text>
+        <circle cx="305" cy="110" r="14" fill="#0d1117" stroke="#d2a8ff" stroke-width="2"/>
+        <text x="305" y="115" text-anchor="middle" fill="#d2a8ff" font-size="13" font-weight="700">N</text>
+
+        <!-- Arms from left N -->
+        <line x1="185" y1="100" x2="140" y2="60" stroke="#58a6ff" stroke-width="2"/>
+        <line x1="185" y1="120" x2="140" y2="160" stroke="#58a6ff" stroke-width="2"/>
+
+        <!-- Arms from right N -->
+        <line x1="315" y1="100" x2="360" y2="60" stroke="#58a6ff" stroke-width="2"/>
+        <line x1="315" y1="120" x2="360" y2="160" stroke="#58a6ff" stroke-width="2"/>
+
+        <!-- CH2 groups -->
+        <rect x="105" y="45" width="36" height="22" rx="4" fill="#1c2330" stroke="#30363d" stroke-width="1"/>
+        <text x="123" y="61" text-anchor="middle" fill="#e6edf3" font-size="12">CH₂</text>
+        <rect x="105" y="145" width="36" height="22" rx="4" fill="#1c2330" stroke="#30363d" stroke-width="1"/>
+        <text x="123" y="161" text-anchor="middle" fill="#e6edf3" font-size="12">CH₂</text>
+        <rect x="362" y="45" width="36" height="22" rx="4" fill="#1c2330" stroke="#30363d" stroke-width="1"/>
+        <text x="380" y="61" text-anchor="middle" fill="#e6edf3" font-size="12">CH₂</text>
+        <rect x="362" y="145" width="36" height="22" rx="4" fill="#1c2330" stroke="#30363d" stroke-width="1"/>
+        <text x="380" y="161" text-anchor="middle" fill="#e6edf3" font-size="12">CH₂</text>
+
+        <!-- COOH groups -->
+        <line x1="105" y1="56" x2="75" y2="40" stroke="#3fb950" stroke-width="2"/>
+        <line x1="105" y1="156" x2="75" y2="172" stroke="#3fb950" stroke-width="2"/>
+        <line x1="398" y1="56" x2="428" y2="40" stroke="#3fb950" stroke-width="2"/>
+        <line x1="398" y1="156" x2="428" y2="172" stroke="#3fb950" stroke-width="2"/>
+
+        <text x="60" y="38" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">COOH</text>
+        <text x="60" y="178" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">COOH</text>
+        <text x="445" y="38" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">COOH</text>
+        <text x="445" y="178" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">COOH</text>
+
+        <!-- CH2 between N -->
+        <rect x="219" y="97" width="62" height="22" rx="4" fill="#1c2330" stroke="#30363d" stroke-width="1"/>
+        <text x="250" y="113" text-anchor="middle" fill="#e6edf3" font-size="12">CH₂—CH₂</text>
+
+        <!-- Label -->
+        <text x="250" y="205" text-anchor="middle" fill="#8b949e" font-size="11">6 donor atoms (2N + 4O) → forms very stable chelate with metal ions</text>
+      </svg>
+    </div>
+
+    <h3>Core Calculations</h3>
+
+    <h4>1. Molarity (Concentration)</h4>
+    <div class="formula-box">
+      <div class="formula-label">Definition of Molarity</div>
+      <span class="formula">C = n / V</span>
+      <div style="color:#8b949e;font-size:13px;margin-top:6px;">C = concentration (mol/L) &nbsp;|&nbsp; n = moles &nbsp;|&nbsp; V = volume (L)</div>
+    </div>
+
+    <h4>2. At Equivalence Point</h4>
+    <div class="formula-box">
+      <div class="formula-label">Equivalence Condition</div>
+      <span class="formula">n(acid) = n(base) &nbsp;&nbsp; [for 1:1 reactions]</span>
+      <span class="formula">C₁V₁ = C₂V₂ &nbsp;&nbsp; [for 1:1 reactions]</span>
+      <span class="formula">C₁V₁/n₁ = C₂V₂/n₂ &nbsp;&nbsp; [general]</span>
+      <div style="color:#8b949e;font-size:13px;margin-top:6px;">n₁, n₂ = stoichiometric coefficients</div>
+    </div>
+
+    <h4>3. Titre Volume</h4>
+    <div class="formula-box">
+      <div class="formula-label">Titre Volume</div>
+      <span class="formula">Titre = Final Burette Reading − Initial Burette Reading</span>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example 1 — Acid-Base Titration</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> 25.00 mL of NaOH solution is titrated against 0.1 M HCl. The average titre volume is 22.50 mL. Find the concentration of NaOH.</p>
+        <div class="we-step">
+          <div class="we-num">1</div>
+          <div class="we-text">Write the equation: <br><code>HCl + NaOH → NaCl + H₂O</code> (1:1 ratio)</div>
+        </div>
+        <div class="we-step">
+          <div class="we-num">2</div>
+          <div class="we-text">Apply C₁V₁ = C₂V₂ <br><code>(0.1)(22.50) = C₂(25.00)</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num">3</div>
+          <div class="we-text">Solve: <br><code>C₂ = (0.1 × 22.50) / 25.00 = 2.25 / 25.00</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num">4</div>
+          <div class="we-text"><strong>C(NaOH) = <span style="color:var(--accent3)">0.09 mol/L</span></strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example 2 — Complexometric (EDTA) Titration</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> 50.0 mL of hard water is titrated with 0.010 M EDTA. Average titre = 18.40 mL. Calculate the total hardness in mg/L as CaCO₃ (M = 100.09 g/mol).</p>
+        <div class="we-step">
+          <div class="we-num green">1</div>
+          <div class="we-text">Moles of EDTA used = <code class="g">C × V = 0.010 × 0.01840 = 1.84 × 10⁻⁴ mol</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">2</div>
+          <div class="we-text">Moles of Ca²⁺ = moles of EDTA (1:1) = <code class="g">1.84 × 10⁻⁴ mol</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">3</div>
+          <div class="we-text">Mass of CaCO₃ = <code class="g">1.84 × 10⁻⁴ × 100.09 = 0.01842 g = 18.42 mg</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">4</div>
+          <div class="we-text">Hardness = <code class="g">18.42 mg / 0.050 L = <strong>368 mg/L as CaCO₃</strong></code></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example 3 — Redox (Permanganometry)</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> 0.250 g of iron ore is dissolved and Fe²⁺ titrated with 0.02 M KMnO₄. Titre = 36.20 mL. Find % Fe (M = 55.85 g/mol).</p>
+        <div class="we-step">
+          <div class="we-num orange">1</div>
+          <div class="we-text">Balanced equation (acidic medium):<br><code class="o">MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num orange">2</div>
+          <div class="we-text">Moles KMnO₄ = <code class="o">0.02 × 0.03620 = 7.24 × 10⁻⁴ mol</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num orange">3</div>
+          <div class="we-text">Moles Fe²⁺ = <code class="o">5 × 7.24 × 10⁻⁴ = 3.62 × 10⁻³ mol</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num orange">4</div>
+          <div class="we-text">Mass Fe = <code class="o">3.62 × 10⁻³ × 55.85 = 0.2022 g</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num orange">5</div>
+          <div class="we-text">% Fe = <code class="o">(0.2022 / 0.250) × 100 = <strong>80.88%</strong></code></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 2: GRAVIMETRIC ===== -->
+<section class="section s2" id="gravimetric">
+  <div class="section-header">
+    <span class="section-number">02</span>
+    <div>
+      <div class="section-title">Gravimetric Analysis</div>
+      <div style="color:var(--text-muted);font-size:13px;">Precipitation · Gravimetric Factor · Worked Examples</div>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <h3>Principle & Process Diagram</h3>
+
+    <div class="diagram-wrap">
+      <div class="diagram-title">Gravimetric Analysis — Flow Diagram</div>
+      <svg width="620" height="90" viewBox="0 0 620 90">
+        <!-- Boxes -->
+        <rect x="5" y="20" width="80" height="44" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="45" y="40" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Dissolve</text>
+        <text x="45" y="54" text-anchor="middle" fill="#8b949e" font-size="9">Sample</text>
+
+        <rect x="105" y="20" width="80" height="44" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="145" y="40" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Add Precip.</text>
+        <text x="145" y="54" text-anchor="middle" fill="#8b949e" font-size="9">Agent</text>
+
+        <rect x="205" y="20" width="80" height="44" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="245" y="40" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Digest</text>
+        <text x="245" y="54" text-anchor="middle" fill="#8b949e" font-size="9">(heat/wait)</text>
+
+        <rect x="305" y="20" width="80" height="44" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="345" y="40" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Filter &</text>
+        <text x="345" y="54" text-anchor="middle" fill="#8b949e" font-size="9">Wash</text>
+
+        <rect x="405" y="20" width="80" height="44" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="445" y="40" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Dry/Ignite</text>
+        <text x="445" y="54" text-anchor="middle" fill="#8b949e" font-size="9">in furnace</text>
+
+        <rect x="505" y="20" width="80" height="44" rx="6" fill="#1c2330" stroke="#e3b341" stroke-width="2"/>
+        <text x="545" y="40" text-anchor="middle" fill="#e3b341" font-size="10" font-weight="700">WEIGH</text>
+        <text x="545" y="54" text-anchor="middle" fill="#8b949e" font-size="9">Calculate</text>
+
+        <!-- Arrows -->
+        <line x1="85" y1="42" x2="103" y2="42" stroke="#30363d" stroke-width="2"/>
+        <polygon points="103,38 110,42 103,46" fill="#30363d"/>
+        <line x1="185" y1="42" x2="203" y2="42" stroke="#30363d" stroke-width="2"/>
+        <polygon points="203,38 210,42 203,46" fill="#30363d"/>
+        <line x1="285" y1="42" x2="303" y2="42" stroke="#30363d" stroke-width="2"/>
+        <polygon points="303,38 310,42 303,46" fill="#30363d"/>
+        <line x1="385" y1="42" x2="403" y2="42" stroke="#30363d" stroke-width="2"/>
+        <polygon points="403,38 410,42 403,46" fill="#30363d"/>
+        <line x1="485" y1="42" x2="503" y2="42" stroke="#30363d" stroke-width="2"/>
+        <polygon points="503,38 510,42 503,46" fill="#30363d"/>
+      </svg>
+    </div>
+
+    <h3>The Gravimetric Factor (GF)</h3>
+    <p>The gravimetric factor converts the mass of the <strong>weighed precipitate</strong> into the mass of the <strong>analyte</strong>.</p>
+
+    <div class="formula-box green">
+      <div class="formula-label">Gravimetric Factor</div>
+      <span class="formula green">GF = (a × M_analyte) / (b × M_precipitate)</span>
+      <div style="color:#8b949e;font-size:13px;margin-top:8px;">a = moles of analyte per formula unit of precipitate<br>b = moles of precipitate per formula unit<br>M = molar mass</div>
+    </div>
+
+    <div class="formula-box green">
+      <div class="formula-label">Mass of Analyte</div>
+      <span class="formula green">mass of analyte = mass of precipitate × GF</span>
+    </div>
+
+    <div class="formula-box green">
+      <div class="formula-label">% Analyte in Sample</div>
+      <span class="formula green">% analyte = (mass of analyte / mass of sample) × 100</span>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example — Determining % SO₄²⁻ as BaSO₄</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> 0.5000 g of a sample is dissolved and sulfate precipitated as BaSO₄. After filtering, drying, and igniting, the precipitate mass = 0.4215 g. Find % SO₄²⁻.<br>(M: S=32.06, O=16.00×4=64.00, SO₄=96.06; Ba=137.33, BaSO₄=233.39 g/mol)</p>
+        <div class="we-step">
+          <div class="we-num green">1</div>
+          <div class="we-text">Reaction: <code class="g">Ba²⁺ + SO₄²⁻ → BaSO₄↓</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">2</div>
+          <div class="we-text">Gravimetric Factor: <code class="g">GF = M(SO₄) / M(BaSO₄) = 96.06 / 233.39 = 0.4116</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">3</div>
+          <div class="we-text">Mass of SO₄ = <code class="g">0.4215 × 0.4116 = 0.1735 g</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">4</div>
+          <div class="we-text">% SO₄²⁻ = <code class="g">(0.1735 / 0.5000) × 100 = <strong>34.70%</strong></code></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example 2 — Determining % Cl⁻ as AgCl</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> 0.3000 g sample. AgCl precipitate mass = 0.2874 g. Find % Cl. (M: Cl=35.45, AgCl=143.32)</p>
+        <div class="we-step">
+          <div class="we-num green">1</div>
+          <div class="we-text">GF = <code class="g">35.45 / 143.32 = 0.2474</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">2</div>
+          <div class="we-text">Mass Cl = <code class="g">0.2874 × 0.2474 = 0.07108 g</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">3</div>
+          <div class="we-text">% Cl = <code class="g">(0.07108 / 0.3000) × 100 = <strong>23.69%</strong></code></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 3: COMBUSTION ===== -->
+<section class="section s3" id="combustion">
+  <div class="section-header">
+    <span class="section-number">03</span>
+    <div>
+      <div class="section-title">Volatilization & Combustion Analysis</div>
+      <div style="color:var(--text-muted);font-size:13px;">Elemental Analysis · Absorbents · % C, H, N Calculations</div>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <h3>Combustion Analysis Apparatus</h3>
+    <div class="diagram-wrap">
+      <div class="diagram-title">Combustion Train — Organic Elemental Analysis</div>
+      <svg width="660" height="130" viewBox="0 0 660 130">
+        <!-- O2 supply -->
+        <rect x="5" y="45" width="55" height="40" rx="6" fill="#1c2330" stroke="#58a6ff" stroke-width="1.5"/>
+        <text x="32" y="63" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="700">O₂</text>
+        <text x="32" y="76" text-anchor="middle" fill="#8b949e" font-size="9">Supply</text>
+
+        <!-- Arrow -->
+        <line x1="60" y1="65" x2="78" y2="65" stroke="#58a6ff" stroke-width="1.5"/>
+        <polygon points="78,61 85,65 78,69" fill="#58a6ff"/>
+
+        <!-- Combustion tube -->
+        <rect x="85" y="30" width="130" height="70" rx="8" fill="#1c2330" stroke="#f0883e" stroke-width="2"/>
+        <text x="150" y="58" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="700">Combustion</text>
+        <text x="150" y="72" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="700">Tube</text>
+        <text x="150" y="86" text-anchor="middle" fill="#8b949e" font-size="9">~850°C in O₂</text>
+        <!-- Flame symbol -->
+        <text x="105" y="58" fill="#f0883e" font-size="18">🔥</text>
+
+        <!-- Arrow -->
+        <line x1="215" y1="65" x2="233" y2="65" stroke="#8b949e" stroke-width="1.5"/>
+        <polygon points="233,61 240,65 233,69" fill="#8b949e"/>
+
+        <!-- H2O absorber -->
+        <rect x="240" y="30" width="110" height="70" rx="8" fill="#1c2330" stroke="#58a6ff" stroke-width="2"/>
+        <text x="295" y="55" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="700">H₂O</text>
+        <text x="295" y="68" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="700">Absorber</text>
+        <text x="295" y="81" text-anchor="middle" fill="#8b949e" font-size="9">Mg(ClO₄)₂</text>
+        <text x="295" y="93" text-anchor="middle" fill="#8b949e" font-size="9">Weighed before/after</text>
+
+        <!-- Arrow -->
+        <line x1="350" y1="65" x2="368" y2="65" stroke="#8b949e" stroke-width="1.5"/>
+        <polygon points="368,61 375,65 368,69" fill="#8b949e"/>
+
+        <!-- CO2 absorber -->
+        <rect x="375" y="30" width="110" height="70" rx="8" fill="#1c2330" stroke="#3fb950" stroke-width="2"/>
+        <text x="430" y="55" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">CO₂</text>
+        <text x="430" y="68" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">Absorber</text>
+        <text x="430" y="81" text-anchor="middle" fill="#8b949e" font-size="9">NaOH / Ascarite</text>
+        <text x="430" y="93" text-anchor="middle" fill="#8b949e" font-size="9">Weighed before/after</text>
+
+        <!-- Arrow -->
+        <line x1="485" y1="65" x2="503" y2="65" stroke="#8b949e" stroke-width="1.5"/>
+        <polygon points="503,61 510,65 503,69" fill="#8b949e"/>
+
+        <!-- N2 measurement -->
+        <rect x="510" y="30" width="110" height="70" rx="8" fill="#1c2330" stroke="#d2a8ff" stroke-width="2"/>
+        <text x="565" y="55" text-anchor="middle" fill="#d2a8ff" font-size="11" font-weight="700">N₂ Gas</text>
+        <text x="565" y="68" text-anchor="middle" fill="#d2a8ff" font-size="11" font-weight="700">Collected</text>
+        <text x="565" y="81" text-anchor="middle" fill="#8b949e" font-size="9">Volume measured</text>
+        <text x="565" y="93" text-anchor="middle" fill="#8b949e" font-size="9">(Dumas method)</text>
+
+        <!-- Product labels -->
+        <text x="150" y="118" text-anchor="middle" fill="#f0883e" font-size="9">C→CO₂, H→H₂O, N→N₂</text>
+      </svg>
+    </div>
+
+    <h3>Combustion Reactions</h3>
+    <div class="formula-box orange">
+      <div class="formula-label">General Organic Combustion</div>
+      <span class="formula orange">CₓHᵧNz + O₂ → CO₂ + H₂O + N₂</span>
+    </div>
+    <div class="formula-box orange">
+      <div class="formula-label">Carbon (from CO₂ mass gain)</div>
+      <span class="formula orange">%C = (mass CO₂ × 12.011/44.010) / mass sample × 100</span>
+    </div>
+    <div class="formula-box orange">
+      <div class="formula-label">Hydrogen (from H₂O mass gain)</div>
+      <span class="formula orange">%H = (mass H₂O × 2.016/18.015) / mass sample × 100</span>
+    </div>
+    <div class="formula-box orange">
+      <div class="formula-label">Nitrogen (by difference or Dumas)</div>
+      <span class="formula orange">%N = 100% − %C − %H − %O − %S − ...</span>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example — Empirical Formula from Combustion</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> 0.2000 g of an organic compound gives 0.5867 g CO₂ and 0.2407 g H₂O on combustion. Only C, H, and O are present. Find % composition and empirical formula.</p>
+        <div class="we-step">
+          <div class="we-num orange">1</div>
+          <div class="we-text">%C = <code class="o">(0.5867 × 12.011/44.010) / 0.2000 × 100 = (0.1601/0.2000) × 100 = 80.05%</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num orange">2</div>
+          <div class="we-text">%H = <code class="o">(0.2407 × 2.016/18.015) / 0.2000 × 100 = (0.02693/0.2000) × 100 = 13.47%</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num orange">3</div>
+          <div class="we-text">%O = <code class="o">100 − 80.05 − 13.47 = 6.48%</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num orange">4</div>
+          <div class="we-text">Mole ratios: <code class="o">C: 80.05/12.011 = 6.664 &nbsp; H: 13.47/1.008 = 13.36 &nbsp; O: 6.48/16.00 = 0.405</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num orange">5</div>
+          <div class="we-text">Divide by smallest (0.405): <code class="o">C: 16.5 ≈ 16.5 &nbsp; H: 33 &nbsp; O: 1</code><br>× 2 → <strong>C₃₃H₆₆O₂ → Empirical formula: C₃₃H₆₆O₂</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Volatilization — Direct vs Indirect</h3>
+    <div class="two-col">
+      <div class="callout success">
+        <div class="callout-icon">📈</div>
+        <div class="callout-body"><strong>Direct Method</strong><br>Volatile product is <em>collected and weighed</em>. Mass gained by absorber = mass of volatile component.<br><code style="font-size:12px">mass analyte = mass gained by absorber</code></div>
+      </div>
+      <div class="callout warn">
+        <div class="callout-icon">📉</div>
+        <div class="callout-body"><strong>Indirect Method</strong><br>Measure the <em>loss in mass</em> of the sample during heating.<br><code style="font-size:12px">mass analyte = initial mass − final mass</code><br>Example: moisture content determination</div>
+      </div>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example — % Moisture (Indirect Volatilization)</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> Crucible mass = 18.214 g. Crucible + sample = 19.726 g. After drying at 105°C: crucible + dry sample = 19.655 g. Find % moisture.</p>
+        <div class="we-step">
+          <div class="we-num orange">1</div>
+          <div class="we-text">Mass of sample = <code class="o">19.726 − 18.214 = 1.512 g</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num orange">2</div>
+          <div class="we-text">Mass of moisture lost = <code class="o">19.726 − 19.655 = 0.071 g</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num orange">3</div>
+          <div class="we-text">% Moisture = <code class="o">(0.071 / 1.512) × 100 = <strong>4.70%</strong></code></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 4: ELECTROGRAVIMETRY ===== -->
+<section class="section s4" id="electrogravimetry">
+  <div class="section-header">
+    <span class="section-number">04</span>
+    <div>
+      <div class="section-title">Electrogravimetry</div>
+      <div style="color:var(--text-muted);font-size:13px;">Electrolytic Deposition · Electrode Reactions · Calculations</div>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <h3>Apparatus Diagram</h3>
+    <div class="diagram-wrap">
+      <div class="diagram-title">Electrogravimetric Cell</div>
+      <svg width="420" height="300" viewBox="0 0 420 300">
+        <!-- Beaker -->
+        <path d="M80,80 L60,260 L360,260 L340,80 Z" fill="rgba(88,166,255,0.05)" stroke="#30363d" stroke-width="2"/>
+        <!-- Solution -->
+        <path d="M68,160 L60,260 L360,260 L352,160 Z" fill="rgba(210,168,255,0.12)"/>
+        <text x="210" y="220" text-anchor="middle" fill="#d2a8ff" font-size="13">Electrolyte Solution</text>
+        <text x="210" y="237" text-anchor="middle" fill="#8b949e" font-size="11">(e.g. CuSO₄ in H₂SO₄)</text>
+
+        <!-- Cathode (platinum gauze) -->
+        <rect x="155" y="70" width="30" height="160" rx="3" fill="none" stroke="#3fb950" stroke-width="2.5" stroke-dasharray="4,3"/>
+        <text x="175" y="60" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">Cathode (−)</text>
+        <text x="145" y="280" text-anchor="middle" fill="#3fb950" font-size="10">Pt gauze electrode</text>
+        <text x="145" y="292" text-anchor="middle" fill="#8b949e" font-size="9">(weighed before & after)</text>
+
+        <!-- Anode -->
+        <rect x="235" y="70" width="30" height="160" rx="3" fill="none" stroke="#ff7b72" stroke-width="2.5" stroke-dasharray="4,3"/>
+        <text x="250" y="60" text-anchor="middle" fill="#ff7b72" font-size="11" font-weight="700">Anode (+)</text>
+        <text x="270" y="280" text-anchor="middle" fill="#ff7b72" font-size="10">Pt electrode</text>
+
+        <!-- Wires up to power supply -->
+        <line x1="170" y1="70" x2="170" y2="20" stroke="#3fb950" stroke-width="2"/>
+        <line x1="250" y1="70" x2="250" y2="20" stroke="#ff7b72" stroke-width="2"/>
+
+        <!-- Power supply box -->
+        <rect x="155" y="5" width="110" height="30" rx="6" fill="#1c2330" stroke="#e3b341" stroke-width="1.5"/>
+        <text x="210" y="25" text-anchor="middle" fill="#e3b341" font-size="12" font-weight="700">Power Supply</text>
+
+        <!-- Deposit dots on cathode -->
+        <circle cx="162" cy="130" r="3" fill="#e3b341" opacity="0.8"/>
+        <circle cx="168" cy="145" r="2.5" fill="#e3b341" opacity="0.7"/>
+        <circle cx="174" cy="120" r="3" fill="#e3b341" opacity="0.8"/>
+        <circle cx="165" cy="160" r="2.5" fill="#e3b341" opacity="0.7"/>
+        <circle cx="172" cy="175" r="3" fill="#e3b341" opacity="0.8"/>
+
+        <!-- Ion movement arrows -->
+        <line x1="220" y1="190" x2="190" y2="190" stroke="#d2a8ff" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <polygon points="190,186 183,190 190,194" fill="#d2a8ff"/>
+        <text x="207" y="184" fill="#d2a8ff" font-size="10">Cu²⁺</text>
+
+        <!-- Deposit label -->
+        <text x="130" y="155" fill="#e3b341" font-size="10" font-weight="700">Metal</text>
+        <text x="125" y="167" fill="#e3b341" font-size="10" font-weight="700">deposit</text>
+      </svg>
+    </div>
+
+    <h3>Electrode Reactions</h3>
+    <div class="formula-box purple">
+      <div class="formula-label">Cathode (Reduction) — Metal deposits here</div>
+      <span class="formula purple">Cu²⁺ + 2e⁻ → Cu(s) ↓ on cathode</span>
+      <span class="formula purple">Pb²⁺ + 2e⁻ → Pb(s)</span>
+    </div>
+    <div class="formula-box red">
+      <div class="formula-label">Anode (Oxidation)</div>
+      <span class="formula red">H₂O → ½O₂ + 2H⁺ + 2e⁻</span>
+    </div>
+
+    <h3>Faraday's Laws — Key Equations</h3>
+    <div class="formula-box purple">
+      <div class="formula-label">Faraday's First Law</div>
+      <span class="formula purple">m = (M × I × t) / (n × F)</span>
+      <div style="color:#8b949e;font-size:13px;margin-top:8px;">m = mass deposited (g) &nbsp;|&nbsp; M = molar mass (g/mol)<br>I = current (A) &nbsp;|&nbsp; t = time (s) &nbsp;|&nbsp; n = electrons transferred<br>F = Faraday constant = 96485 C/mol</div>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example — Copper Determination</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> Cathode before = 20.4216 g. After electrolysis of a copper solution: cathode = 20.8742 g. Find: (a) mass of Cu deposited, (b) % Cu if sample = 0.9800 g.</p>
+        <div class="we-step">
+          <div class="we-num purple">1</div>
+          <div class="we-text">Mass Cu = <code class="p">20.8742 − 20.4216 = 0.4526 g</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num purple">2</div>
+          <div class="we-text">% Cu = <code class="p">(0.4526 / 0.9800) × 100 = <strong>46.18%</strong></code></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example 2 — Using Faraday's Law</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> A current of 0.500 A is passed for 1800 s through a Cu²⁺ solution. What mass of Cu is deposited? (M Cu = 63.55 g/mol, n = 2)</p>
+        <div class="we-step">
+          <div class="we-num purple">1</div>
+          <div class="we-text"><code class="p">m = (M × I × t) / (n × F)</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num purple">2</div>
+          <div class="we-text"><code class="p">m = (63.55 × 0.500 × 1800) / (2 × 96485)</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num purple">3</div>
+          <div class="we-text"><code class="p">m = 57,195 / 192,970 = <strong>0.2964 g Cu</strong></code></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 5: TGA ===== -->
+<section class="section s5" id="tga">
+  <div class="section-header">
+    <span class="section-number">05</span>
+    <div>
+      <div class="section-title">Thermogravimetry (TGA)</div>
+      <div style="color:var(--text-muted);font-size:13px;">Thermobalance · TGA Curves · Calculations</div>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <h3>Thermobalance Diagram</h3>
+    <div class="diagram-wrap">
+      <div class="diagram-title">Thermobalance — TGA Instrument</div>
+      <svg width="440" height="280" viewBox="0 0 440 280">
+        <!-- Balance beam -->
+        <line x1="100" y1="60" x2="340" y2="60" stroke="#e3b341" stroke-width="3"/>
+        <circle cx="220" cy="60" r="6" fill="#e3b341"/>
+        <line x1="220" y1="54" x2="220" y2="20" stroke="#e3b341" stroke-width="2"/>
+        <!-- Balance housing -->
+        <rect x="175" y="5" width="90" height="30" rx="6" fill="#1c2330" stroke="#e3b341" stroke-width="1.5"/>
+        <text x="220" y="25" text-anchor="middle" fill="#e3b341" font-size="11" font-weight="700">BALANCE</text>
+
+        <!-- Sample pan -->
+        <ellipse cx="130" cy="80" rx="25" ry="7" fill="none" stroke="#d2a8ff" stroke-width="2"/>
+        <line x1="130" y1="60" x2="130" y2="73" stroke="#d2a8ff" stroke-width="1.5"/>
+        <!-- Sample on pan -->
+        <ellipse cx="130" cy="73" rx="15" ry="5" fill="rgba(210,168,255,0.4)" stroke="#d2a8ff" stroke-width="1"/>
+        <text x="130" y="100" text-anchor="middle" fill="#d2a8ff" font-size="11" font-weight="700">SAMPLE</text>
+
+        <!-- Reference pan -->
+        <ellipse cx="310" cy="80" rx="25" ry="7" fill="none" stroke="#8b949e" stroke-width="2"/>
+        <line x1="310" y1="60" x2="310" y2="73" stroke="#8b949e" stroke-width="1.5"/>
+        <text x="310" y="100" text-anchor="middle" fill="#8b949e" font-size="11">Reference</text>
+        <text x="310" y="112" text-anchor="middle" fill="#8b949e" font-size="9">(optional)</text>
+
+        <!-- Furnace surrounding sample -->
+        <rect x="80" y="108" width="100" height="130" rx="10" fill="#1c2330" stroke="#f0883e" stroke-width="2.5"/>
+        <text x="130" y="130" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="700">FURNACE</text>
+        <!-- Heat waves -->
+        <text x="88" y="165" fill="#f0883e" font-size="20" opacity="0.7">〰</text>
+        <text x="88" y="195" fill="#f0883e" font-size="20" opacity="0.5">〰</text>
+        <!-- Thermocouple -->
+        <line x1="155" y1="150" x2="195" y2="150" stroke="#e3b341" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="200" y="154" fill="#e3b341" font-size="10">Thermocouple</text>
+
+        <!-- Temperature programmer -->
+        <rect x="280" y="130" width="130" height="50" rx="6" fill="#1c2330" stroke="#58a6ff" stroke-width="1.5"/>
+        <text x="345" y="152" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="700">Temperature</text>
+        <text x="345" y="167" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="700">Programmer</text>
+        <line x1="280" y1="155" x2="195" y2="155" stroke="#58a6ff" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+        <!-- Recorder -->
+        <rect x="280" y="205" width="130" height="50" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="345" y="227" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">Recorder /</text>
+        <text x="345" y="242" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">Computer</text>
+        <line x1="345" y1="205" x2="345" y2="180" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+        <!-- Gas inlet -->
+        <line x1="80" y1="175" x2="40" y2="175" stroke="#8b949e" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="35" y="170" text-anchor="end" fill="#8b949e" font-size="10">Gas</text>
+        <text x="35" y="182" text-anchor="end" fill="#8b949e" font-size="10">inlet</text>
+        <text x="35" y="194" text-anchor="end" fill="#8b949e" font-size="9">(N₂/O₂)</text>
+      </svg>
+    </div>
+
+    <h3>Typical TGA Curve — CaC₂O₄·H₂O Decomposition</h3>
+    <div class="diagram-wrap">
+      <div class="diagram-title">TGA Thermogram — Calcium Oxalate Monohydrate</div>
+      <svg width="520" height="280" viewBox="0 0 520 280">
+        <!-- Axes -->
+        <line x1="60" y1="20" x2="60" y2="240" stroke="#30363d" stroke-width="2"/>
+        <line x1="60" y1="240" x2="490" y2="240" stroke="#30363d" stroke-width="2"/>
+        <!-- Y axis label -->
+        <text x="15" y="140" text-anchor="middle" fill="#8b949e" font-size="11" transform="rotate(-90,15,140)">Mass (% remaining)</text>
+        <!-- X axis label -->
+        <text x="275" y="265" text-anchor="middle" fill="#8b949e" font-size="11">Temperature (°C)</text>
+        <!-- Y ticks -->
+        <text x="55" y="44" text-anchor="end" fill="#8b949e" font-size="10">100</text>
+        <line x1="58" y1="40" x2="62" y2="40" stroke="#8b949e" stroke-width="1"/>
+        <text x="55" y="104" text-anchor="end" fill="#8b949e" font-size="10">87.7</text>
+        <line x1="58" y1="100" x2="62" y2="100" stroke="#8b949e" stroke-width="1"/>
+        <text x="55" y="154" text-anchor="end" fill="#8b949e" font-size="10">68.4</text>
+        <line x1="58" y1="150" x2="62" y2="150" stroke="#8b949e" stroke-width="1"/>
+        <text x="55" y="204" text-anchor="end" fill="#8b949e" font-size="10">38.1</text>
+        <line x1="58" y1="200" x2="62" y2="200" stroke="#8b949e" stroke-width="1"/>
+        <!-- X ticks -->
+        <text x="100" y="253" text-anchor="middle" fill="#8b949e" font-size="10">100</text>
+        <text x="190" y="253" text-anchor="middle" fill="#8b949e" font-size="10">400</text>
+        <text x="290" y="253" text-anchor="middle" fill="#8b949e" font-size="10">500</text>
+        <text x="390" y="253" text-anchor="middle" fill="#8b949e" font-size="10">700</text>
+        <text x="470" y="253" text-anchor="middle" fill="#8b949e" font-size="10">900</text>
+
+        <!-- TGA curve -->
+        <polyline points="60,40 100,40 130,100 160,100 200,150 230,150 350,200 380,200 440,200" 
+                  fill="none" stroke="#e3b341" stroke-width="3"/>
+
+        <!-- Plateau annotations -->
+        <!-- Step 1: loss of H2O -->
+        <line x1="115" y1="100" x2="115" y2="120" stroke="#58a6ff" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="118" y="115" fill="#58a6ff" font-size="9">Step 1: −H₂O</text>
+        <text x="118" y="125" fill="#8b949e" font-size="8">~200°C</text>
+        <text x="118" y="135" fill="#8b949e" font-size="8">−12.3%</text>
+
+        <!-- Step 2: CO loss -->
+        <line x1="215" y1="150" x2="215" y2="175" stroke="#3fb950" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="218" y="168" fill="#3fb950" font-size="9">Step 2: −CO</text>
+        <text x="218" y="178" fill="#8b949e" font-size="8">~500°C</text>
+        <text x="218" y="188" fill="#8b949e" font-size="8">−19.2%</text>
+
+        <!-- Step 3: CO2 loss -->
+        <line x1="365" y1="200" x2="365" y2="218" stroke="#ff7b72" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="368" y="212" fill="#ff7b72" font-size="9">Step 3: −CO₂</text>
+        <text x="368" y="222" fill="#8b949e" font-size="8">~750°C</text>
+        <text x="368" y="232" fill="#8b949e" font-size="8">−30.3%</text>
+
+        <!-- Plateau labels -->
+        <text x="80" y="35" fill="#e3b341" font-size="9">CaC₂O₄·H₂O</text>
+        <text x="155" y="95" fill="#e3b341" font-size="9">CaC₂O₄</text>
+        <text x="240" y="145" fill="#e3b341" font-size="9">CaCO₃</text>
+        <text x="395" y="195" fill="#e3b341" font-size="9">CaO</text>
+      </svg>
+    </div>
+
+    <h3>TGA Calculations</h3>
+    <div class="formula-box gold">
+      <div class="formula-label">% Mass Remaining</div>
+      <span class="formula gold">% mass remaining = (mass at temperature T / initial mass) × 100</span>
+    </div>
+    <div class="formula-box gold">
+      <div class="formula-label">% Mass Lost at Each Step</div>
+      <span class="formula gold">% mass lost = 100 − % mass remaining at plateau</span>
+      <span class="formula gold">OR: (mass before step − mass after step) / initial mass × 100</span>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example — TGA of CaC₂O₄·H₂O</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Given:</strong> Initial mass = 10.00 mg. After step 1 (200°C) = 8.77 mg. After step 2 (500°C) = 6.84 mg. After step 3 (750°C) = 3.81 mg.</p>
+        <div class="we-step">
+          <div class="we-num gold">1</div>
+          <div class="we-text">Step 1 loss = <code class="gd">(10.00 − 8.77)/10.00 × 100 = 12.3%</code> → Loss of H₂O (MW=18, formula MW=146 → 12.3% ✓)</div>
+        </div>
+        <div class="we-step">
+          <div class="we-num gold">2</div>
+          <div class="we-text">Step 2 loss = <code class="gd">(8.77 − 6.84)/10.00 × 100 = 19.3%</code> → Loss of CO (MW=28, formula MW=128 → 21.9% ≈ ✓)</div>
+        </div>
+        <div class="we-step">
+          <div class="we-num gold">3</div>
+          <div class="we-text">Step 3 loss = <code class="gd">(6.84 − 3.81)/10.00 × 100 = 30.3%</code> → Loss of CO₂ (MW=44)</div>
+        </div>
+        <div class="we-step">
+          <div class="we-num gold">4</div>
+          <div class="we-text">Final residue = <code class="gd">3.81/10.00 × 100 = 38.1%</code> → CaO (MW=56.08, expected 38.4% ✓)</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 6: DTA ===== -->
+<section class="section s6" id="dta">
+  <div class="section-header">
+    <span class="section-number">06</span>
+    <div>
+      <div class="section-title">Differential Thermal Analysis (DTA)</div>
+      <div style="color:var(--text-muted);font-size:13px;">Instrument · Thermogram · Interpretation · vs DSC</div>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <h3>DTA Instrument Diagram</h3>
+    <div class="diagram-wrap">
+      <div class="diagram-title">DTA — Block Diagram</div>
+      <svg width="500" height="200" viewBox="0 0 500 200">
+        <!-- Furnace -->
+        <rect x="120" y="30" width="260" height="120" rx="12" fill="#1c2330" stroke="#ff7b72" stroke-width="2.5"/>
+        <text x="250" y="55" text-anchor="middle" fill="#ff7b72" font-size="13" font-weight="700">FURNACE</text>
+        <text x="250" y="70" text-anchor="middle" fill="#8b949e" font-size="10">Heated at constant rate (e.g. 10°C/min)</text>
+
+        <!-- Sample crucible -->
+        <ellipse cx="175" cy="120" rx="30" ry="10" fill="rgba(255,123,114,0.2)" stroke="#ff7b72" stroke-width="2"/>
+        <rect x="145" y="100" width="60" height="25" rx="4" fill="rgba(255,123,114,0.1)" stroke="#ff7b72" stroke-width="1.5"/>
+        <text x="175" y="96" text-anchor="middle" fill="#ff7b72" font-size="11" font-weight="700">SAMPLE</text>
+        <!-- Thermocouple S -->
+        <line x1="175" y1="145" x2="175" y2="175" stroke="#ff7b72" stroke-width="1.5"/>
+        <text x="160" y="190" fill="#ff7b72" font-size="10">Tₛ</text>
+
+        <!-- Reference crucible -->
+        <ellipse cx="325" cy="120" rx="30" ry="10" fill="rgba(88,166,255,0.2)" stroke="#58a6ff" stroke-width="2"/>
+        <rect x="295" y="100" width="60" height="25" rx="4" fill="rgba(88,166,255,0.1)" stroke="#58a6ff" stroke-width="1.5"/>
+        <text x="325" y="96" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="700">REFERENCE</text>
+        <text x="325" y="88" text-anchor="middle" fill="#8b949e" font-size="9">(Al₂O₃)</text>
+        <!-- Thermocouple R -->
+        <line x1="325" y1="145" x2="325" y2="175" stroke="#58a6ff" stroke-width="1.5"/>
+        <text x="315" y="190" fill="#58a6ff" font-size="10">T_ref</text>
+
+        <!-- ΔT -->
+        <line x1="175" y1="180" x2="325" y2="180" stroke="#e3b341" stroke-width="1.5"/>
+        <text x="250" y="195" text-anchor="middle" fill="#e3b341" font-size="11" font-weight="700">ΔT = Tₛ − T_ref → Recorder</text>
+
+        <!-- Temp programmer -->
+        <rect x="0" y="65" width="110" height="50" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="55" y="87" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Temperature</text>
+        <text x="55" y="100" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Programmer</text>
+        <line x1="110" y1="90" x2="120" y2="90" stroke="#3fb950" stroke-width="1.5"/>
+
+        <!-- Recorder -->
+        <rect x="390" y="65" width="110" height="50" rx="6" fill="#1c2330" stroke="#d2a8ff" stroke-width="1.5"/>
+        <text x="445" y="87" text-anchor="middle" fill="#d2a8ff" font-size="10" font-weight="700">Recorder /</text>
+        <text x="445" y="100" text-anchor="middle" fill="#d2a8ff" font-size="10" font-weight="700">Computer</text>
+        <line x1="380" y1="90" x2="390" y2="90" stroke="#d2a8ff" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <h3>DTA Curve (Thermogram) — Interpretation</h3>
+    <div class="diagram-wrap">
+      <div class="diagram-title">Typical DTA Thermogram showing Endothermic and Exothermic Events</div>
+      <svg width="520" height="260" viewBox="0 0 520 260">
+        <!-- Axes -->
+        <line x1="60" y1="20" x2="60" y2="230" stroke="#30363d" stroke-width="2"/>
+        <line x1="60" y1="130" x2="500" y2="130" stroke="#30363d" stroke-width="2"/>
+        <!-- Labels -->
+        <text x="10" y="135" fill="#e3b341" font-size="11" font-weight="700">ΔT</text>
+        <text x="275" y="252" text-anchor="middle" fill="#8b949e" font-size="11">Temperature →</text>
+        <text x="40" y="40" text-anchor="end" fill="#3fb950" font-size="10">Exo</text>
+        <text x="40" y="220" text-anchor="end" fill="#58a6ff" font-size="10">Endo</text>
+        <!-- Arrows on Y -->
+        <polygon points="60,22 56,32 64,32" fill="#3fb950"/>
+        <polygon points="60,228 56,218 64,218" fill="#58a6ff"/>
+
+        <!-- Baseline -->
+        <line x1="60" y1="130" x2="130" y2="130" stroke="#e6edf3" stroke-width="2"/>
+
+        <!-- Endothermic peak (trough down) - melting ~200°C -->
+        <path d="M130,130 Q155,130 165,130 Q175,130 180,175 Q185,210 195,210 Q205,210 210,175 Q215,140 225,130 L280,130" 
+              fill="none" stroke="#58a6ff" stroke-width="2.5"/>
+
+        <!-- Exothermic peak (up) - crystallization ~450°C -->
+        <path d="M280,130 Q300,130 310,130 Q318,130 323,85 Q328,50 338,50 Q348,50 353,85 Q358,118 368,130 L420,130"
+              fill="none" stroke="#3fb950" stroke-width="2.5"/>
+
+        <!-- Small endothermic - decomposition ~600°C -->
+        <path d="M420,130 Q430,130 435,155 Q440,170 445,170 Q450,170 455,155 Q460,135 470,130 L500,130"
+              fill="none" stroke="#58a6ff" stroke-width="2"/>
+
+        <!-- Annotations -->
+        <text x="195" y="225" text-anchor="middle" fill="#58a6ff" font-size="10">Melting/Dehydration</text>
+        <text x="195" y="237" text-anchor="middle" fill="#8b949e" font-size="9">(Endothermic ↓)</text>
+
+        <text x="338" y="40" text-anchor="middle" fill="#3fb950" font-size="10">Crystallization/Oxidation</text>
+        <text x="338" y="52" text-anchor="middle" fill="#8b949e" font-size="9">(Exothermic ↑)</text>
+
+        <text x="448" y="180" text-anchor="middle" fill="#58a6ff" font-size="10">Decomposition</text>
+        <text x="448" y="190" text-anchor="middle" fill="#8b949e" font-size="9">(Endothermic ↓)</text>
+
+        <!-- Peak temp lines -->
+        <line x1="195" y1="210" x2="195" y2="130" stroke="#58a6ff" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+        <text x="195" y="125" text-anchor="middle" fill="#58a6ff" font-size="9">Tₚ</text>
+        <line x1="338" y1="50" x2="338" y2="130" stroke="#3fb950" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+        <text x="338" y="143" text-anchor="middle" fill="#3fb950" font-size="9">Tₚ</text>
+      </svg>
+    </div>
+
+    <h3>Key Equation</h3>
+    <div class="formula-box red">
+      <div class="formula-label">Temperature Difference</div>
+      <span class="formula red">ΔT = T(sample) − T(reference)</span>
+      <div style="color:#8b949e;font-size:13px;margin-top:8px;">
+        ΔT &gt; 0 → <span style="color:#3fb950">Exothermic</span> (sample hotter than reference)<br>
+        ΔT &lt; 0 → <span style="color:#58a6ff">Endothermic</span> (sample cooler — absorbing heat)
+      </div>
+    </div>
+
+    <h3>DTA vs TGA — Combined Analysis</h3>
+    <table>
+      <tr><th>Feature</th><th>TGA</th><th>DTA</th></tr>
+      <tr><td>What is measured</td><td>Mass change</td><td>Temperature difference (ΔT)</td></tr>
+      <tr><td>Y-axis</td><td>Mass (mg) or %</td><td>ΔT (°C)</td></tr>
+      <tr><td>Detects reactions with no mass change</td><td>❌ No</td><td>✅ Yes (melting, crystallization)</td></tr>
+      <tr><td>Quantitative</td><td>✅ Fully</td><td>Semi-quantitative</td></tr>
+      <tr><td>Identifies gases evolved</td><td>❌ (needs MS/FTIR)</td><td>❌</td></tr>
+      <tr><td>Combined as</td><td colspan="2">TGA-DTA or TGA-DSC (simultaneous)</td></tr>
+    </table>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 7: SAMPLING ===== -->
+<section class="section s7" id="sampling">
+  <div class="section-header">
+    <span class="section-number">07</span>
+    <div>
+      <div class="section-title">Sampling</div>
+      <div style="color:var(--text-muted);font-size:13px;">Techniques · Sample Size Calculations · Errors</div>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <h3>Coning and Quartering — Diagram</h3>
+    <div class="diagram-wrap">
+      <div class="diagram-title">Coning and Quartering Method</div>
+      <svg width="480" height="180" viewBox="0 0 480 180">
+        <!-- Step 1: Cone -->
+        <polygon points="60,160 120,160 90,80" fill="rgba(63,185,80,0.3)" stroke="#3fb950" stroke-width="2"/>
+        <text x="90" y="174" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">1. Form</text>
+        <text x="90" y="186" text-anchor="middle" fill="#3fb950" font-size="11">Cone</text>
+
+        <!-- Arrow -->
+        <line x1="130" y1="120" x2="150" y2="120" stroke="#8b949e" stroke-width="1.5"/>
+        <polygon points="150,116 157,120 150,124" fill="#8b949e"/>
+
+        <!-- Step 2: Flatten -->
+        <ellipse cx="190" cy="130" rx="50" ry="20" fill="rgba(63,185,80,0.3)" stroke="#3fb950" stroke-width="2"/>
+        <text x="190" y="165" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">2. Flatten</text>
+
+        <!-- Arrow -->
+        <line x1="245" y1="130" x2="265" y2="130" stroke="#8b949e" stroke-width="1.5"/>
+        <polygon points="265,126 272,130 265,134" fill="#8b949e"/>
+
+        <!-- Step 3: Quarter -->
+        <ellipse cx="320" cy="130" rx="50" ry="20" fill="rgba(63,185,80,0.1)" stroke="#3fb950" stroke-width="2"/>
+        <line x1="270" y1="130" x2="370" y2="130" stroke="#3fb950" stroke-width="2"/>
+        <line x1="320" y1="110" x2="320" y2="150" stroke="#3fb950" stroke-width="2"/>
+        <!-- Shade 2 opposite quarters -->
+        <path d="M270,130 Q295,110 320,110 Q320,130 270,130 Z" fill="rgba(63,185,80,0.5)"/>
+        <path d="M370,130 Q345,150 320,150 Q320,130 370,130 Z" fill="rgba(63,185,80,0.5)"/>
+        <text x="320" y="165" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">3. Quarter &</text>
+        <text x="320" y="177" text-anchor="middle" fill="#3fb950" font-size="11">keep 2 opposite</text>
+
+        <!-- Arrow -->
+        <line x1="375" y1="130" x2="395" y2="130" stroke="#8b949e" stroke-width="1.5"/>
+        <polygon points="395,126 402,130 395,134" fill="#8b949e"/>
+
+        <!-- Step 4: Repeat -->
+        <rect x="402" y="110" width="68" height="40" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="436" y="128" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">4. Repeat</text>
+        <text x="436" y="142" text-anchor="middle" fill="#8b949e" font-size="9">until right size</text>
+      </svg>
+    </div>
+
+    <h3>Sampling Calculations</h3>
+
+    <div class="formula-box green">
+      <div class="formula-label">Minimum Sample Size — Ingamells Sampling Constant</div>
+      <span class="formula green">Ks = w × (Rₛ)²</span>
+      <div style="color:#8b949e;font-size:13px;margin-top:8px;">Ks = sampling constant (g·%) &nbsp;|&nbsp; w = mass of sample (g)<br>Rₛ = relative standard deviation of sampling (%)</div>
+    </div>
+
+    <div class="formula-box green">
+      <div class="formula-label">Required Sample Mass for a Given Precision</div>
+      <span class="formula green">w = Ks / (Rₛ)²</span>
+    </div>
+
+    <div class="formula-box green">
+      <div class="formula-label">Sampling Standard Deviation</div>
+      <span class="formula green">σ_total² = σ_sampling² + σ_method²</span>
+      <div style="color:#8b949e;font-size:13px;margin-top:8px;">Total variance = sampling variance + analytical method variance</div>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example — Minimum Sample Mass</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> A sampling constant Ks = 25 g·%. What minimum sample mass is needed to achieve a sampling RSD of 1.0%? Of 0.5%?</p>
+        <div class="we-step">
+          <div class="we-num green">1</div>
+          <div class="we-text">For Rₛ = 1.0%: <code class="g">w = 25 / (1.0)² = 25 / 1 = <strong>25.0 g</strong></code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">2</div>
+          <div class="we-text">For Rₛ = 0.5%: <code class="g">w = 25 / (0.5)² = 25 / 0.25 = <strong>100.0 g</strong></code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">3</div>
+          <div class="we-text"><strong>Note:</strong> Halving the RSD requires <strong>4× more sample mass!</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="worked-example">
+      <div class="we-header">⚗️ Worked Example 2 — Total Uncertainty</div>
+      <div class="we-body">
+        <p style="margin-bottom:14px;font-size:14px;"><strong>Question:</strong> σ_sampling = 0.30%, σ_method = 0.10%. Find total uncertainty.</p>
+        <div class="we-step">
+          <div class="we-num green">1</div>
+          <div class="we-text"><code class="g">σ_total² = (0.30)² + (0.10)² = 0.09 + 0.01 = 0.10</code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">2</div>
+          <div class="we-text"><code class="g">σ_total = √0.10 = <strong>0.316%</strong></code></div>
+        </div>
+        <div class="we-step">
+          <div class="we-num green">3</div>
+          <div class="we-text"><strong>Conclusion:</strong> Sampling error (0.30%) dominates — improving the analytical method has little effect. Effort should go into better sampling!</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Sample Hierarchy</h3>
+    <div class="diagram-wrap">
+      <div class="diagram-title">From Bulk to Analytical Sample</div>
+      <svg width="480" height="80" viewBox="0 0 480 80">
+        <rect x="5" y="20" width="80" height="40" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="45" y="38" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Bulk</text>
+        <text x="45" y="52" text-anchor="middle" fill="#8b949e" font-size="9">Lot / Field</text>
+
+        <line x1="85" y1="40" x2="103" y2="40" stroke="#30363d" stroke-width="1.5"/>
+        <polygon points="103,36 110,40 103,44" fill="#30363d"/>
+
+        <rect x="110" y="20" width="80" height="40" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="150" y="38" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Gross</text>
+        <text x="150" y="52" text-anchor="middle" fill="#8b949e" font-size="9">Sample</text>
+
+        <line x1="190" y1="40" x2="208" y2="40" stroke="#30363d" stroke-width="1.5"/>
+        <polygon points="208,36 215,40 208,44" fill="#30363d"/>
+
+        <rect x="215" y="20" width="80" height="40" rx="6" fill="#1c2330" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="255" y="38" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">Lab</text>
+        <text x="255" y="52" text-anchor="middle" fill="#8b949e" font-size="9">Sample</text>
+
+        <line x1="295" y1="40" x2="313" y2="40" stroke="#30363d" stroke-width="1.5"/>
+        <polygon points="313,36 320,40 313,44" fill="#30363d"/>
+
+        <rect x="320" y="20" width="80" height="40" rx="6" fill="#1c2330" stroke="#e3b341" stroke-width="2"/>
+        <text x="360" y="38" text-anchor="middle" fill="#e3b341" font-size="10" font-weight="700">Test</text>
+        <text x="360" y="52" text-anchor="middle" fill="#8b949e" font-size="9">Sample</text>
+
+        <line x1="400" y1="40" x2="418" y2="40" stroke="#30363d" stroke-width="1.5"/>
+        <polygon points="418,36 425,40 418,44" fill="#30363d"/>
+
+        <rect x="425" y="20" width="50" height="40" rx="6" fill="#1c2330" stroke="#ff7b72" stroke-width="2"/>
+        <text x="450" y="38" text-anchor="middle" fill="#ff7b72" font-size="10" font-weight="700">Ana-</text>
+        <text x="450" y="52" text-anchor="middle" fill="#ff7b72" font-size="9">lyze</text>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- MASTER SUMMARY -->
+<div style="background:var(--surface);border:2px solid var(--gold);border-radius:12px;padding:30px;margin-bottom:40px;">
+  <h2 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.6rem;margin-bottom:20px;text-align:center;">📋 Master Exam Summary</h2>
+  <table>
+    <tr>
+      <th>Method</th><th>Measures</th><th>Key Formula</th><th>Key Application</th>
+    </tr>
+    <tr>
+      <td style="color:var(--accent)">Titration</td>
+      <td>Volume of titrant</td>
+      <td class="mono" style="color:var(--accent)">C₁V₁ = C₂V₂</td>
+      <td>Unknown concentration</td>
+    </tr>
+    <tr>
+      <td style="color:var(--accent3)">Gravimetric</td>
+      <td>Mass of precipitate</td>
+      <td class="mono" style="color:var(--accent3)">% = (m_ppt × GF / m_sample) × 100</td>
+      <td>% composition</td>
+    </tr>
+    <tr>
+      <td style="color:var(--accent2)">Combustion</td>
+      <td>Mass of absorbed gases</td>
+      <td class="mono" style="color:var(--accent2)">%C = (m_CO₂ × 12/44) / m_sample × 100</td>
+      <td>C, H, N in organics</td>
+    </tr>
+    <tr>
+      <td style="color:var(--accent5)">Electrogravimetry</td>
+      <td>Mass gained on electrode</td>
+      <td class="mono" style="color:var(--accent5)">m = MIt / nF</td>
+      <td>Metal determination</td>
+    </tr>
+    <tr>
+      <td style="color:var(--gold)">TGA</td>
+      <td>Mass vs. temperature</td>
+      <td class="mono" style="color:var(--gold)">% mass = (mT / m₀) × 100</td>
+      <td>Thermal decomposition</td>
+    </tr>
+    <tr>
+      <td style="color:var(--accent4)">DTA</td>
+      <td>ΔT vs. temperature</td>
+      <td class="mono" style="color:var(--accent4)">ΔT = Tsample − Treference</td>
+      <td>Phase transitions</td>
+    </tr>
+    <tr>
+      <td style="color:var(--accent3)">Sampling</td>
+      <td>Representative portion</td>
+      <td class="mono" style="color:var(--accent3)">w = Ks / Rs²</td>
+      <td>Starting point of all analysis</td>
+    </tr>
+  </table>
+  <div style="text-align:center;margin-top:20px;color:var(--text-muted);font-size:13px;font-style:italic;">
+    Good luck on your exams! 💪 You've got everything you need right here.
+  </div>
+</div>
+
+</div><!-- end container -->
+</body>
+</html>
